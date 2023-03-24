@@ -8,11 +8,7 @@ concurrency:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        runs-on: [ubuntu-latest, buildjet-2vcpu-ubuntu-2204, buildjet-4vcpu-ubuntu-2204, buildjet-8vcpu-ubuntu-2204, buildjet-16vcpu-ubuntu-2204]
-    name: build - ${{matrix.runs-on}}
-    runs-on: ${{matrix.runs-on}}
+    runs-on: buildjet-2vcpu-ubuntu-2204
     timeout-minutes: 60
 
     steps:
